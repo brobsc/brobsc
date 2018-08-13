@@ -6,7 +6,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./config/nginx/conf.d:/etc/nginx/conf.d/
+      - ./config/nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - simple
 
@@ -15,6 +15,6 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./simple-server/:/home/simple-server/
+      - ./simple-server:/home/simple-server
     environment:
       - NODE_ENV=production
