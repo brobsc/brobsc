@@ -9,6 +9,7 @@ services:
       - ./config/nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - simple
+    restart: always
 
   simple:
     build: ./simple-server/
@@ -16,3 +17,4 @@ services:
       - "8080:8080"
     environment:
       - NODE_ENV=production
+    restart: always
