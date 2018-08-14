@@ -14,7 +14,5 @@ services:
     build: ./simple-server/
     ports:
       - "8080:8080"
-    volumes:
-      - ./simple-server:/home/simple-server
     environment:
       - NODE_ENV=production
